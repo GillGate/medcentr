@@ -1,0 +1,89 @@
+.reset();
+
+html {
+	overflow-x: hidden;
+	color: @black;
+}
+
+body {
+	background-color: #DCDCDC;
+	font-family: "PT Root UI";
+	font-size: 16px;
+	line-height: 20px;
+}
+
+a {
+	font-family: inherit;
+	display: inline-block;
+	text-decoration: none;
+	color: @black;
+}
+
+address {
+	color: inherit;
+}
+
+.container {
+	.wrapper();
+}
+
+.vh {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.h1, .h2, .h3 {
+	font-family: "Golos";
+	font-weight: 500;
+}
+
+.h1 {
+	font-size: 86px;
+	line-height: 104px;
+	font-weight: 600;
+}
+
+.h2 {
+	font-size: 36px;
+	line-height: 43px;
+}
+
+.h3 {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.button {
+	color: @orange;
+	padding: 12px 32px;
+	background: none;
+	border: 1px solid @orange;
+	border-radius: 30px;
+	font-family: inherit;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background .5s ease;
+
+	&:hover {
+		border-color: @orange-lighten;
+		color:  @orange-lighten;
+	}
+
+	&--filled {
+		background-color: @orange;
+		color: @white;
+
+		&:hover {
+			background-color: @orange-lighten;
+			color: @white;
+		}
+	}
+}

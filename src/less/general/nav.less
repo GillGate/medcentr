@@ -1,0 +1,47 @@
+.nav {
+	&__body {
+		display: flex;
+	}
+
+	&__link {
+		margin-left: 40px;
+		font-size: 18px;
+		line-height: 22px;
+		color: @dark-blue;
+		transition: color .5s ease, fill .5s ease;
+
+		&:hover {
+			color: @orange;
+
+			svg {
+				fill: @orange
+			}
+		}
+
+		&--services {
+			display: flex;
+
+			.nav__icon {
+				margin-left: 10px;
+			}
+
+			&:hover {
+				.nav__icon {
+					transform: rotate(180deg) translateY(-4px);
+				}
+			}
+		}
+
+		&--catalog {
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 21px;
+				height: 17px;
+				background: url(../img/icon-catalog.svg) no-repeat center / contain;
+				margin-right: 10px;
+				transform: translateY(2px);
+			}
+		}
+	}
+}

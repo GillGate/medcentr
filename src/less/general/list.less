@@ -1,0 +1,52 @@
+.list {
+	font-size: 16px;
+	line-height: 20px;
+	color: @dark-blue;
+
+	&__item {
+		margin-bottom: 24px;
+		padding-left: 40px;
+		position: relative;
+
+		span {
+			font-weight: 500;
+		}
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			margin-right: 16px;
+			background: url(../img/icon-check.svg) no-repeat center / contain;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&--shield {
+			&::before {
+				background-image: url(../img/icon-shield.svg);
+			}
+		}
+
+		&--award {
+			&::before {
+				background-image: url(../img/icon-award.svg);
+			}
+		}
+
+		&--dollar {
+			&::before {
+				background-image: url(../img/icon-dollar.svg);
+			}
+		}
+
+		&--document {
+			&::before {
+				background-image: url(../img/icon-document.svg);
+			}
+		}
+	}
+}

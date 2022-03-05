@@ -1,0 +1,45 @@
+.intro {
+	padding: 100px 0 250px;
+	background: url(../img/main-intro-bg.jpg) no-repeat center bottom / 90%;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			text-transform: none;
+			font-size: 38px;
+			line-height: 45px;
+		}
+	}
+
+	&__list {
+		margin-top: 66px;
+	}
+
+	&__offer {
+		margin-right: 80px;
+
+		&Item {
+			max-width: 320px;
+			padding: 15px 20px;
+			background: @grey-bg;
+			border-radius: 10px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+
+		&Text {
+			margin: 20px 0 14px;
+		}
+
+		&Btn {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.advantage {
+	padding: 20px 0;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__title {
+		max-width: 480px;
+	}
+
+	&__text {
+		margin-top: 30px;
+		font-size: 18px;
+		line-height: 22px;
+
+		p {
+			margin-bottom: 22px;
+		}
+	}
+
+	&__dialog {
+		display: flex;
+		align-items: flex-end;
+		margin-right: 110px;
+
+		&Img {
+			width: 100px;
+			height: 100px;
+		}
+
+		&Message {
+			width: 100%;
+			max-width: 514px;
+			min-height: 150px;
+			padding: 20px;
+			padding-left: 114px;
+			margin-left: 36px;
+			box-sizing: border-box;
+			background: url(../img/advantage-dialog.svg) no-repeat right center / contain;
+		}
+
+		&Head {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		&Time {
+			font-size: 14px;
+			line-height: 17px;
+			color: #848498;
+		}
+
+		&Text {
+			margin-top: 30px;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 90px 100px 0 auto;
+		max-width: 660px;
+	}
+
+	&__item {
+		.size(6);
+
+		margin-bottom: 72px;
+		padding-right: 10px;
+
+		&Title {
+			font-size: 50px;
+			line-height: 60px;
+			color: @orange;
+		}
+
+		&Text {
+			margin-top: 12px;
+		}
+	}
+}

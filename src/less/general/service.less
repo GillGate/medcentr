@@ -1,0 +1,122 @@
+.service {
+	padding: 120px 0 0;
+	position: relative;
+
+	.container {
+		box-sizing: border-box;
+	}
+
+	&__mainTitle {
+		max-width: 564px;
+	}
+
+	&__wrapper {
+		margin-top: 60px;
+		display: grid; 
+	  	grid-auto-flow: row dense; 
+	  	grid-template-columns: 1fr 1fr 1fr; 
+	 	grid-template-rows: 1fr 1fr 1fr;
+	  	gap: 10px; 
+  		grid-template-areas: 
+	    ". . remont"
+	    "arenda arenda remont"
+	    ". . ."; 
+
+	    &::before {
+	    	content: '';
+	    	display: block;
+	    	width: 687px;
+	    	height: 620px;
+	    	background: url(../img/services-element-bg.svg) no-repeat center / contain;
+	    	position: absolute;
+	    	left: 0;
+	    }
+
+	     &::after {
+	    	content: '';
+	    	display: block;
+	    	width: 749px;
+	    	height: 768px;
+	    	background: url(../img/services-element-bg.svg) no-repeat center / contain;
+	    	position: absolute;
+	    	right: 150px;
+	    	top: 20%;
+	    }
+	}
+
+	&__item {
+		padding: 20px;
+		min-height: 235px;
+		background: @grey-alpha;
+		border: 1px solid @grey-border;
+		border-radius: 10px;
+		box-sizing: border-box;
+		position: relative;
+
+		&:hover {
+			background: @grey-alpha-hover;
+		}
+
+		&--remont {
+			grid-area: remont;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 268px;
+				height: 300px;
+				background: url(../img/services-remont.svg) no-repeat center / contain;
+				position: absolute;
+				right: 50px;
+				bottom: 16px;
+			}
+		}
+
+		&--arenda {
+			grid-area: arenda;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 224px;
+				height: 200px;
+				background: url(../img/services-arenda.svg) no-repeat center / contain;
+				position: absolute;
+				top: 20px;
+				right: 50px;
+			}
+
+		}
+	}
+
+	&__itemWrapper {
+		display: flex;
+		flex-direction: column;
+		max-width: 390px;
+		max-height: 192px;
+		height: 100%;
+	}
+
+	&__title {
+		max-width: 90%;
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	&__text {
+		margin-top: auto;
+	}
+
+	&__bottom {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__price {
+		font-size: 30px;
+		line-height: 37px;
+		color: @orange;
+	}
+}
