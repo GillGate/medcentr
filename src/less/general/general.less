@@ -7,9 +7,14 @@ html {
 
 body {
 	background-color: #DCDCDC;
-	font-family: "PT Root UI";
+	font-family: @font-pt;
 	font-size: 16px;
 	line-height: 20px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 a {
@@ -23,8 +28,13 @@ address {
 	color: inherit;
 }
 
+button {
+	cursor: pointer;
+}
+
 .container {
 	.wrapper();
+	box-sizing: border-box;
 }
 
 .vh {
@@ -59,6 +69,20 @@ address {
 	line-height: 24px;
 }
 
+.text {
+	font-size: 18px;
+	line-height: 22px;
+	color: @dark-blue;
+	
+	p {
+		margin-bottom: 22px;
+	}
+
+	span {
+		font-weight: 500;
+	}
+}
+
 .button {
 	color: @orange;
 	padding: 12px 32px;
@@ -69,7 +93,6 @@ address {
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 500;
-	cursor: pointer;
 	transition: background .5s ease;
 
 	&:hover {

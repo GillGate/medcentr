@@ -1,0 +1,45 @@
+.why {
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		max-width: 430px;
+	}
+
+	&__text {
+		margin-top: 30px;
+	}
+
+	&__list {
+		margin-top: 74px;
+		margin-right: 100px;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 650px;
+		gap: 10px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 320px;
+		padding: 16px 20px;
+		box-sizing: border-box;
+		background-color: @grey-bg;
+		border-radius: 10px;
+
+		&Text {
+			margin-top: 20px;
+			color: @dark-blue;
+		}
+
+		&Img {
+			margin-top: auto;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
