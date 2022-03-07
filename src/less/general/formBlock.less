@@ -8,6 +8,28 @@
 	background-color: @grey-bg;
 	border-radius: 10px;
 	border: 1px solid @grey-border;
+	box-sizing: border-box;
+
+	&--orange {
+		margin: 120px auto;
+		background-color: @orange;
+		color: @white;
+	}
+
+	&--home {
+		background: @orange url(../img/formBlock-home-bg.svg) no-repeat right bottom / 740px 310px;
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 626px;
+			height: 456px;
+			background: url(../img/formBlock-home.png) no-repeat center bottom / contain;
+			position: absolute;
+			bottom: 0;
+			right: -20px;
+		}
+	}
 
 	&__title {
 		max-width: 646px;
@@ -16,6 +38,11 @@
 		span {
 			color: @orange;
 		}
+	}
+
+	&__text {
+		margin-top: 24px;
+		margin-bottom: 30px;
 	}
 
 	&__body {

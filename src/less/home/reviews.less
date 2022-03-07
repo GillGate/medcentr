@@ -47,6 +47,27 @@
 
 	&__slider {
 		max-width: 790px;
-		margin: 0 auto;
+		margin: 72px auto 120px;
+	}
+
+	&__dots {
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+
+			li button {
+				width: 40px;
+				height: 6px;
+				background-color: #CECECE;
+				border-radius: 10px;
+				font-size: 0;
+				border: none;
+				margin: 0 5px;
+			}
+
+			li.slick-active button {
+				background-color: @orange;
+			}
+		}
 	}
 }

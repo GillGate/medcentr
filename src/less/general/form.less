@@ -36,4 +36,24 @@
 		font-size: 12px;
 		line-height: 15px;
 	}
+
+	&--white {
+		.form__input {
+			background-color:  #FF9568;
+			color: @white;
+
+			&::placeholder {
+				color: @white;
+			}
+		}
+
+		.form__submit {
+			background-color: @white;
+			color: @black;
+		}
+
+		.form__caption {
+			color: #FFAD8A;
+		}
+	}
 }

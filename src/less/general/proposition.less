@@ -1,10 +1,30 @@
 .proposition {
-	margin: 100px auto;
-	max-width: 1090px;
-	padding: 40px 50px;
-	background: ;
-	border: 1px solid @grey-border;
-	background: @grey-bg url(../img/proposition-image.svg) no-repeat 90% top / 33%;
+	margin: 100px 0;
+	
+	&__wrapper {
+		max-width: 1090px;
+		margin: 0 auto;
+		padding: 40px 50px;
+		border: 1px solid @grey-border;
+		background-color: @grey-bg;
+		border-radius: 10px;
+		position: relative;
+
+		.md-block({
+			text-align: center;
+		});
+	}
+
+	&__img {
+		position: absolute;
+		right: 30px;
+		top: 0;
+
+		.md-block({
+			position: static;
+			margin-bottom: 16px;
+		});
+	}
 
 	&__title {
 		max-width: 600px;
@@ -13,5 +33,9 @@
 		line-height: 36px;
 		font-weight: 500;
 		margin-bottom: 30px;
+
+		.md-block({
+			margin: 0 auto 6px;
+		});
 	}
 }

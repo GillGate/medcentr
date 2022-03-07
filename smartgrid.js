@@ -8,18 +8,21 @@ const settings = {
         fields: '65px'
     },
     breakPoints: {
+        lg: {
+            width: "1240px",
+        },
         md: {
             width: "1024px",
         },
         sm: {
-            width: "760px",
+            width: "768px",
         },
         xs: {
-            width: "480px",
+            width: "580px",
         }
     },
     oldSizeStyle: false,
     mobileFirst: false
 };
 
-smartgrid('./src/less', settings);
+smartgrid('./src/less/libs', settings);

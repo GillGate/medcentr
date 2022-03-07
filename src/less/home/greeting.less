@@ -2,10 +2,27 @@
 	&__wrapper {
 		display: flex;
 		justify-content: center;
+
+		.sm-block({
+			flex-direction: column-reverse;
+		});
 	}
 
 	&__title {
 		max-width: 540px;
 		margin-left: 120px;
+
+		.sm-block({
+			max-width: 350px;
+			margin-bottom: 30px;
+			margin-left: 0;
+		});
+	}
+
+	&__img {
+		.sm-block({
+			width: 80%;
+			margin-left: auto;
+		})
 	}
 }

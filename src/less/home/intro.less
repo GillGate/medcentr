@@ -2,9 +2,18 @@
 	padding: 100px 0 250px;
 	background: url(../img/main-intro-bg.jpg) no-repeat center bottom / 90%;
 
+	.md-block({
+		padding: 50px 0 250px;
+		background-size: cover
+	});
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		.md-block({
+			justify-content: center;
+		});
 	}
 
 	&__title {
@@ -15,15 +24,33 @@
 			text-transform: none;
 			font-size: 38px;
 			line-height: 45px;
+
+			.md-block({
+				font-size: 24px;
+				line-height: 28px;
+			});
+
+			.sm-block({
+				font-size: 18px;
+				line-height: 21px;
+			});
 		}
 	}
 
 	&__list {
 		margin-top: 66px;
+
+		.md-block({
+			margin-top: 40px;
+		});
 	}
 
 	&__offer {
 		margin-right: 80px;
+
+		.lg-block({
+			display: none;
+		});
 
 		&Item {
 			max-width: 320px;

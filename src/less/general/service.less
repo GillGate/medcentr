@@ -1,6 +1,30 @@
 .service {
 	padding: 120px 0 0;
 	position: relative;
+	z-index: 1;
+
+	&::before {
+    	content: '';
+    	display: block;
+    	width: 687px;
+    	height: 620px;
+    	background: url(../img/element-bg.svg) no-repeat center / contain;
+    	position: absolute;
+    	left: 0;
+    	z-index: -1;
+    }
+
+     &::after {
+    	content: '';
+    	display: block;
+    	width: 749px;
+    	height: 768px;
+    	background: url(../img/element-bg.svg) no-repeat center / contain;
+    	position: absolute;
+    	right: 150px;
+    	top: 20%;
+    	z-index: -1;
+    }
 
 	.container {
 		box-sizing: border-box;
@@ -22,26 +46,20 @@
 	    "arenda arenda remont"
 	    ". . ."; 
 
-	    &::before {
-	    	content: '';
-	    	display: block;
-	    	width: 687px;
-	    	height: 620px;
-	    	background: url(../img/services-element-bg.svg) no-repeat center / contain;
-	    	position: absolute;
-	    	left: 0;
-	    }
+	    .lg-block({
+	    	grid-template-columns: 1fr 1fr; 
+	 		grid-template-rows: 1fr 1fr;
+	    	grid-template-areas: 
+		    ". ."
+		    "arenda remont"
+		    ". ."; 
+	    });
 
-	     &::after {
-	    	content: '';
-	    	display: block;
-	    	width: 749px;
-	    	height: 768px;
-	    	background: url(../img/services-element-bg.svg) no-repeat center / contain;
-	    	position: absolute;
-	    	right: 150px;
-	    	top: 20%;
-	    }
+	    .sm-block({
+	    	display: flex;
+	    	overflow-x: scroll;
+	    	padding-bottom: 10px;
+	    });
 	}
 
 	&__item {
@@ -53,6 +71,11 @@
 		box-sizing: border-box;
 		position: relative;
 
+
+		.sm-block({
+			min-width: 233px;
+		});
+
 		&:hover {
 			background: @grey-alpha-hover;
 		}
@@ -60,15 +83,31 @@
 		&--remont {
 			grid-area: remont;
 
+			.service__itemWrapper {
+				max-height: 194px;
+
+				.lg-block({
+					max-height: 240px;
+				});
+
+				.md-block({
+					max-height: 100%;
+				});
+			}
+
 			&::after {
 				content: '';
 				display: block;
-				width: 268px;
+				width: 258px;
 				height: 300px;
 				background: url(../img/services-remont.svg) no-repeat center / contain;
 				position: absolute;
-				right: 50px;
+				right: 30px;
 				bottom: 16px;
+
+				.lg-block({
+					display: none;
+				});
 			}
 		}
 
@@ -84,8 +123,11 @@
 				position: absolute;
 				top: 20px;
 				right: 50px;
-			}
 
+				.lg-block({
+					display: none;
+				});
+			}
 		}
 	}
 
@@ -93,7 +135,6 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 390px;
-		max-height: 192px;
 		height: 100%;
 	}
 
@@ -105,6 +146,11 @@
 
 	&__text {
 		margin-top: auto;
+
+		.lg-block({
+			margin-top: 30px;
+			margin-bottom: 10px;
+		});
 	}
 
 	&__bottom {
@@ -112,11 +158,29 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.lg-block({
+			margin-top: auto;
+		});
+
+		.md-block({
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		});
 	}
 
 	&__price {
 		font-size: 30px;
 		line-height: 37px;
 		color: @orange;
+
+		.lg-block({
+			font-size: 18px;
+			line-height: 20px;
+		});
+
+		.md-block({
+			margin-bottom: 14px;
+		});
 	}
 }

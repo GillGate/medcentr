@@ -1,0 +1,35 @@
+.social {
+	display: flex;
+	
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		margin-right: 6px;
+		background-color: @grey-bg;
+		border-radius: 50%;
+		transition: background .5s ease;
+
+		svg {
+			transition: fill .5s ease;
+		}
+
+		&:hover {
+			background-color: @orange;
+
+			svg	{
+				fill: @white;
+			}
+		}
+
+		&--yt {
+			&:hover {
+				svg > path:last-child {
+					fill: #FD4C00;
+				}
+			}
+		}
+	}
+}
