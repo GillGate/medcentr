@@ -3,6 +3,7 @@
 
 	&__wrapper {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
@@ -15,12 +16,25 @@
 	}
 
 	&__list {
+		margin-left: auto;
 		margin-top: 74px;
 		margin-right: 100px;
 		display: flex;
 		flex-wrap: wrap;
 		max-width: 650px;
 		gap: 10px;
+
+		.md-block({
+			max-width: 100%;
+			margin-right: 0;
+		});
+
+		.sm-block({
+			margin-top: 40px;
+			flex-wrap: nowrap;
+			overflow-x: scroll;
+			padding-bottom: 10px;
+		});
 	}
 
 	&__item {
@@ -32,6 +46,10 @@
 		box-sizing: border-box;
 		background-color: @grey-bg;
 		border-radius: 10px;
+
+		.sm-block({
+			min-width: 234px;
+		});
 
 		&Text {
 			margin-top: 20px;

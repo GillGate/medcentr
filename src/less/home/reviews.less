@@ -1,5 +1,9 @@
 .reviews {
 	padding: 100px 0;
+
+	.sm-block({
+		padding: 50px 0;
+	});
 	
 	&__header {
 		display: flex;
@@ -18,6 +22,21 @@
 
 	&__controls {
 		display: flex;
+
+		&--desktop {
+			.sm-block({
+				display: none;
+			});
+		}
+
+		&--mobile {
+			display: none;
+
+			.sm-block({
+				display: flex;
+				justify-content: flex-end;
+			});
+		}
 	}
 
 	&__button {
@@ -27,6 +46,11 @@
 		background-color: @grey-bg;
 		border: none;
 		transition: background .5s ease;
+
+		.sm-block({
+			width: 40px;
+			height: 40px;
+		});
 
 		svg {
 			transition: fill .5s ease;
@@ -48,9 +72,17 @@
 	&__slider {
 		max-width: 790px;
 		margin: 72px auto 120px;
+
+		.sm-block({
+			margin-bottom: 20px;
+		});
 	}
 
 	&__dots {
+		.sm-block({
+			display: none;
+		});
+
 		.slick-dots {
 			display: flex;
 			justify-content: center;

@@ -1,5 +1,5 @@
 .nav {
-	.md-block({
+	.sm-block({
 		display: none;
 	});
 
@@ -13,6 +13,11 @@
 		line-height: 30px;
 		color: @dark-blue;
 		transition: color .5s ease, fill .5s ease;
+
+		.md-block({
+			margin-left: 30px;
+			font-size: 16px;
+		});
 
 		.sm-block({
 			margin-left: 0;
@@ -49,7 +54,11 @@
 				margin-left: 10px;
 				position: absolute;
 				top: -2px;
-				left: 53px;
+				left: 52px;
+
+				.md-block({
+					left: 44px;
+				});
 
 				.sm-block({
 					left: 90px;

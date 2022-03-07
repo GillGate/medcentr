@@ -2,6 +2,10 @@
 	&__body {
 		display: flex;
 		margin-right: -10px;
+
+		.xs-block({
+			flex-direction: column;
+		});
 	}
 
 	&__label {
@@ -35,6 +39,11 @@
 		color: #B1AFAF;
 		font-size: 12px;
 		line-height: 15px;
+
+		.sm-block({
+			font-size: 11px;
+			text-align: center;
+		});
 	}
 
 	&--white {

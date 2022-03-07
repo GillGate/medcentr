@@ -1,39 +1,108 @@
 .formBlock {
-	width: 100%;
-	max-width: 1310px;
-	margin: 100px auto;
-	padding: 50px 110px 50px 70px;
-	display: flex;
-	justify-content: space-between;
-	background-color: @grey-bg;
-	border-radius: 10px;
-	border: 1px solid @grey-border;
-	box-sizing: border-box;
+	margin: 100px 0;
 
-	&--orange {
-		margin: 120px auto;
-		background-color: @orange;
-		color: @white;
+	.sm-block({
+		margin: 50px 0;
+	});
+
+	&__wrapper {
+		width: 100%;
+		padding: 50px 110px 50px 70px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: @grey-bg;
+		border-radius: 10px;
+		border: 1px solid @grey-border;
+		box-sizing: border-box;
+
+		.md-block({
+			flex-direction: column;
+		});
+
+		.sm-block({
+			padding: 40px;
+		});
+
+		.xs-block({
+			padding: 20px;
+		});
+
+		&--home {
+			background: @orange url(../img/formBlock-home-bg.svg) no-repeat right bottom / 740px 310px;
+			position: relative;
+
+			.lg-block({
+				background-size: 84%;
+			});
+
+			.md-block({
+				background-position: center bottom;
+				background-size: 100%;
+			});
+
+			.formBlock__img {
+				display: none;
+
+				.lg-block({
+					display: block;
+					max-width: 80%;
+					margin-bottom: -5px;
+				});
+			}
+
+			&::after {
+				content: '';
+				width: 626px;
+				height: 456px;
+				background: url(../img/formBlock-home.png) no-repeat center bottom / contain;
+				position: absolute;
+				bottom: 0;
+				right: -20px;
+
+				.lg-block({
+					display: none;
+				});
+			}
+		}
 	}
 
-	&--home {
-		background: @orange url(../img/formBlock-home-bg.svg) no-repeat right bottom / 740px 310px;
-		position: relative;
+	&--orange {
+		margin: 120px 0;
 
-		&::after {
-			content: '';
-			width: 626px;
-			height: 456px;
-			background: url(../img/formBlock-home.png) no-repeat center bottom / contain;
-			position: absolute;
-			bottom: 0;
-			right: -20px;
+		.formBlock__wrapper {
+			background-color: @orange;
+			color: @white;
+
+			.lg-block({
+				flex-direction: column;
+				padding-bottom: 0;
+				max-width: 760px;
+				margin: 0 auto;
+				text-align: center;
+			});
+
+			.md-block({
+				padding: 20px;
+				padding-bottom: 0;
+			});
+		}
+
+		.formBlock__title {
+			.lg-block({
+				margin-right: 0;
+			});
 		}
 	}
 
 	&__title {
 		max-width: 646px;
 		margin-right: 50px;
+
+		.md-block({
+			text-align: center;
+			margin: 0 auto;
+		});
 
 		span {
 			color: @orange;
@@ -47,5 +116,11 @@
 
 	&__body {
 		max-width: 430px;
+		min-width: 430px;
+
+		.md-block({
+			margin-top: 30px;
+			min-width: auto;
+		});
 	}
 }

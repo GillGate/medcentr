@@ -17,6 +17,11 @@
 		display: flex;
 		width: 100%;
 		max-width: 240px;
+		margin-right: auto;
+
+		.md-block({
+			max-width: 190px;
+		});
 
 		.xs-block({
 			max-width: 160px;
@@ -74,10 +79,6 @@
 		});
 	}
 
-	&__logo {
-		margin-right: auto;
-	}
-
 	&__order {
 		margin-left: 40px;
 
@@ -86,6 +87,10 @@
 			height: 40px;
 			line-height: 38px;
 			padding: 0;
+		});
+
+		.md-block({
+			margin-left: 20px;
 		});
 
 		span {
@@ -111,7 +116,7 @@
 		transition: transform .5s ease;
 		margin-left: 16px;
 
-		.md-block({
+		.sm-block({
 			display: flex;
 		});
 
