@@ -1,0 +1,78 @@
+.partners {
+	position: relative;
+	z-index: 1;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 268px;
+		height: 222px;
+		background: rgba(253, 76, 0, 0.35); 
+		filter: blur(100px);
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: -40px;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 750px;
+		height: 766px;
+		background: url(../img/element-bg.svg) no-repeat center / contain;
+		// filter: blur(100px);
+		position: absolute;
+		top: -320px;
+		right: 0;
+		transform: translateX(10%);
+	}
+
+	&__wrapper {
+		padding: 30px 50px 20px;
+		background: rgba(240, 233, 231, 0.6);
+		border: 1px solid @grey-border;
+		box-sizing: border-box;
+		backdrop-filter: blur(8px);
+		border-radius: 10px;
+		position: relative;
+		z-index: 10;
+
+		.sm-block({
+			padding: 20px;
+		});
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 22px;
+		color: @grey;
+	}
+
+	&__slider {
+		padding: 36px 0;
+		.slick-track {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__item {
+		display: flex !important;
+		justify-content: center;
+
+		a {
+			padding: 0 5px;
+		}
+	}
+
+	&__dots {
+		.slick-dots {
+			li.slick-active {
+				button {
+					background-color: @white;
+				}
+			}
+		}
+	}
+}

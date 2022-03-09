@@ -1,18 +1,21 @@
 @columns: 12;
 @atom: (100% / @columns);
 
+@break_llg: 1440px;
 @break_lg: 1240px;
 @break_md: 1024px;
 @break_sm: 768px;
 @break_xs: 580px;
 
 @offset: 10px;
+@offset_llg: @offset;
 @offset_lg: @offset;
 @offset_md: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
 
 @offset_one_side: (@offset / 2);
+@offset_llg_one_side: (@offset_llg / 2);
 @offset_lg_one_side: (@offset_lg / 2);
 @offset_md_one_side: (@offset_md / 2);
 @offset_sm_one_side: (@offset_sm / 2);
@@ -81,6 +84,11 @@
     width: ~"calc(@{val} - @{offset})";
 }
 
+.size-llg(@n){
+    @val: 100% / @columns * @n;
+    .llg(width, ~"calc(@{val} - @{offset_llg})");
+}
+
 .size-lg(@n){
     @val: 100% / @columns * @n;
     .lg(width, ~"calc(@{val} - @{offset_lg})");
@@ -131,6 +139,38 @@
 .shift-padding-right(@n){
     @val: 100% / @columns * @n;
     padding-right: ~"calc(@{val} + @{offset_one_side})";
+}
+
+.shift-llg(@n){
+    @val: 100% / @columns * @n;
+    .llg(margin-left, ~"calc(@{val} + @{offset_llg_one_side})");
+    .llg(margin-right, ~"calc(@{val} + @{offset_llg_one_side})");
+}
+
+.shift-llg-left(@n){
+    @val: 100% / @columns * @n;
+    .llg(margin-left, ~"calc(@{val} + @{offset_llg_one_side})");
+}
+
+.shift-llg-right(@n){
+    @val: 100% / @columns * @n;
+    .llg(margin-right, ~"calc(@{val} + @{offset_llg_one_side})");
+}
+
+.shift-llg-padding(@n){
+    @val: 100% / @columns * @n;
+    .llg(padding-left, ~"calc(@{val} + @{offset_llg_one_side})");
+    .llg(padding-right, ~"calc(@{val} + @{offset_llg_one_side})");
+}
+
+.shift-llg-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .llg(padding-left, ~"calc(@{val} + @{offset_llg_one_side})");
+}
+
+.shift-llg-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .llg(padding-right, ~"calc(@{val} + @{offset_llg_one_side})");
 }
 
 .shift-lg(@n){
@@ -259,6 +299,18 @@
 .shift-xs-padding-right(@n){
     @val: 100% / @columns * @n;
     .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
+}
+
+.llg(@name, @value){
+    @media screen and (max-width: @break_llg){
+        @{name}: @value;
+    }
+}
+
+.llg-block(@content){
+    @media screen and (max-width: @break_llg){
+        @content();
+    }
 }
 
 .lg(@name, @value){

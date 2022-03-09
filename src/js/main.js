@@ -1,4 +1,6 @@
 $(function(){
+	let clWidth = document.documentElement.clientWidth;
+
 	$('.header__bar').on('click', function() {
 		$(this).toggleClass('header__bar--open');
 
@@ -18,4 +20,40 @@ $(function(){
 		dots: true,
 		appendDots: '.reviews__dots'
 	});
+
+	$('.partners__slider').slick({
+		slidesToShow: 5,
+		autoplay: true,
+		arrows: false,
+		dots: true,
+		appendDots: '.partners__dots',
+		responsive: [
+			{
+				breakpoint: 1240,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+		]
+	});
+
+	if(clWidth < 769) {
+		$('.team__list').slick({
+			slidesToShow: 1,
+			prevArrow: '.team__button--prev',
+			nextArrow: '.team__button--next'
+		});
+	}
 });

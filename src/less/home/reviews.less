@@ -21,8 +21,6 @@
 	}
 
 	&__controls {
-		display: flex;
-
 		&--desktop {
 			.sm-block({
 				display: none;
@@ -39,36 +37,6 @@
 		}
 	}
 
-	&__button {
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		background-color: @grey-bg;
-		border: none;
-		transition: background .5s ease;
-
-		.sm-block({
-			width: 40px;
-			height: 40px;
-		});
-
-		svg {
-			transition: fill .5s ease;
-		}
-
-		&:hover {
-			background-color: @orange;
-
-			svg {
-				fill: @white;
-			}
-		}
-
-		&--prev {
-			margin-right: 10px;
-		}
-	}
-
 	&__slider {
 		max-width: 790px;
 		margin: 72px auto 120px;
@@ -82,24 +50,5 @@
 		.sm-block({
 			display: none;
 		});
-
-		.slick-dots {
-			display: flex;
-			justify-content: center;
-
-			li button {
-				width: 40px;
-				height: 6px;
-				background-color: #CECECE;
-				border-radius: 10px;
-				font-size: 0;
-				border: none;
-				margin: 0 5px;
-			}
-
-			li.slick-active button {
-				background-color: @orange;
-			}
-		}
 	}
 }

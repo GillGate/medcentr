@@ -8,6 +8,9 @@ const settings = {
         fields: '65px'
     },
     breakPoints: {
+        llg: {
+            width: "1440px"
+        },
         lg: {
             width: "1240px",
         },
