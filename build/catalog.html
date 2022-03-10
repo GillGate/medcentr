@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>О компании</title>
+	<title>Каталог</title>
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-	<header class="header header--about">
+	<header class="header">
 		<div class="container">
 			<div class="header__top">
 				<div class="header__info">
@@ -123,257 +123,244 @@
 			</div>	
 		</div>
 	</header>
-	<section class="aboutIntro">
-		<div class="container aboutIntro__wrapper">
-			<h1 class="h1 aboutIntro__title">С 2010 года оказываем полный спектр услуг по лицензированию медицинской деятельности</h1>
-			<p class="h2 aboutIntro__caption">
-				Мы работаем исключительно в интересах соискателя лицензии, понимая медицинский бизнес изнутри.
-			</p>
-		</div>
-	</section>
-	<section class="partners">
+	<section class="catalog">
 		<div class="container">
-			<div class="partners__wrapper">
-				<p class="partners__title">Среди наших клиентов</p>
-				<div class="partners__slider">
-					<div class="partners__item">
-						<a href="#">
-							<img src="img/partners-1.png" alt="">
-						</a>
+			<h1 class="h1 catalog__title">
+				Каталог
+			</h1>
+			<form class="catalog__filter">
+				<select name="catalog-sort">
+					<option checked value="0">Сортировать</option>
+					<option value="1">По возрастанию</option>
+					<option value="2">По убыванию</option>
+				</select>
+			</form>
+			<h2 class="vh">Список товаров</h2>
+			<div class="catalog__list">
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">BES-12L-B-LED</p>
+						<h3 class="h3 product__title">Автоклав (стерилизатор паровой)</h3>
 					</div>
-					<div class="partners__item">
-						<a href="#">
-							<img src="img/partners-2.png" alt="">
-						</a>
+					<div class="product__img">
+						<img src="img/catalog-1.png" alt="">
 					</div>
-					<div class="partners__item">
-						<a href="#">
-							<img src="img/partners-3.png" alt="">
-						</a>
-					</div>
-					<div class="partners__item">
-						<a href="#">
-							<img src="img/partners-4.png" alt="">
-						</a>
-					</div>
-					<div class="partners__item">
-						<a href="#">
-							<img src="img/partners-5.png" alt="">
-						</a>
-					</div>
-					<div class="partners__item">
-						<a href="#">
-							<img src="img/partners-1.png" alt="">
-						</a>
+					<ul class="product__props">
+						<li class="product__propsItem">Тройной цикл предвакуума</li>
+						<li class="product__propsItem">5 программ стерилизации</li>
+						<li class="product__propsItem">Система вакуумной сушки</li>
+						<li class="product__propsItem">Тесты B&D и VACUUM-тест</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">107 000 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
 					</div>
 				</div>
-				<div class="slider__dots partners__dots"></div>
-			</div>
-		</div>
-	</section>
-	<section class="aboutAdvantage">
-		<div class="container aboutAdvantage__wrapper">
-			<div class="aboutAdvantage__info">
-				<h2 class="h2 aboutAdvantage__title">
-					О нас
-				</h2>
-				<p class="text aboutAdvantage__text">
-					11-летний опыт фокусировки только на медицине, позволяет нам помогать Вам не только с точки зрения права, но и с точки зрения комфорта врачей и клиентов клиники, и при проектировании кабинетов, и на следующих этапах.
-				</p>
-			</div>
-			<ul class="aboutAdvantage__list advantage__list">
-				<li class="advantage__item">
-					<h3 class="advantage__itemTitle">11 лет</h3>
-					<p class="advantage__itemText">Опыт работы</p>
-				</li>
-				<li class="advantage__item">
-					<h3 class="advantage__itemTitle">>110 000 000 ₽</h3>
-					<p class="advantage__itemText">Сэкономили нашим клиентам</p>
-				</li>
-				<li class="advantage__item">
-					<h3 class="advantage__itemTitle">5 лет</h3>
-					<p class="advantage__itemText">Средний стаж всех архитекторов, проектировщиков и юристов</p>
-				</li>
-				<li class="advantage__item">
-					<h3 class="advantage__itemTitle">500+ шт</h3>
-					<p class="advantage__itemText">Лицензий помогли получить</p>
-				</li>
-			</ul>
-		</div>
-	</section>
-	<section class="mission">
-		<div class="container mission__wrapper">
-			<h2 class="h1 mission__title">
-				Миссия
-			</h2>
-		</div>
-	</section>
-	<section class="team">
-		<div class="container">
-			<p class="h1 team__title">
-				С 2010 года оказываем полный спектр услуг по лицензированию медицинской деятельности
-			</p>
-			<div class="team__info">
-				<h2 class="h2 team__infoTitle">Команда</h2>
-				<p class="text team__infoText">
-					Мы команда профессионалов, узко специализируемся на работе в медицинской сфере.
-				</p>
-			</div>
-			<div class="team__list">
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">BES-15L-B-LED</p>
+						<h3 class="h3 product__title">Автоклав (стерилизатор паровой)</h3>
 					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
+					<div class="product__img">
+						<img src="img/catalog-2.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Тройной цикл предвакуума</li>
+						<li class="product__propsItem">5 программ стерилизации</li>
+						<li class="product__propsItem">Система вакуумной сушки</li>
+						<li class="product__propsItem">Тесты B&D и VACUUM-тест</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">120 694 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
 					</div>
 				</div>
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">"CATTANI" на 2 установки</p>
+						<h3 class="h3 product__title">Компрессор стоматологический безмасляный  (160 л/мин)</h3>
 					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
+					<div class="product__img">
+						<img src="img/catalog-3.png" alt="">
 					</div>
-				</div>
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
-					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Объем ресивера 30 л</li>
+						<li class="product__propsItem">Производительность 160л/мин при 5 бар</li>
+						<li class="product__propsItem">Рабочий диапазон давления 5-8 бар.</li>
+						<li class="product__propsItem">Уровень шума 70 дБ.</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">141 980 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
 					</div>
 				</div>
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">Vatech EzSensor SOFT</p>
+						<h3 class="h3 product__title">Радиовизиограф</h3>
+					</div>	
+					<div class="product__img">
+						<img src="img/catalog-4.png" alt="">
 					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
-					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Мягкий контур и легкое позиционирование</li>
+						<li class="product__propsItem">Самый маленький размер пикселя</li>
+						<li class="product__propsItem">Высокое разрешение и контрастный снимок</li>
+						<li class="product__propsItem">Прочные материалы</li>
+					</ul>
+					<div class="product__bottom">
+						<a href="#" class="button product__button">Подробнее</a>
 					</div>
 				</div>
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">BES-12L-B-LED</p>
+						<h3 class="h3 product__title">Автоклав (стерилизатор паровой)</h3>
 					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
+					<div class="product__img">
+						<img src="img/catalog-1.png" alt="">
 					</div>
-				</div>
-				<div class="team__item member">
-					<div class="member__img">
-						<img src="img/member.jpg" width="540" height="600" alt="">
-					</div>
-					<div class="member__info">
-						<h3 class="member__title">Евгения Ладыка</h3>
-						<p class="member__caption">Основатель консалтингового центра, юрист</p>
-						<div class="member__text">
-							<ul>
-								<li>15 лет стажа - от управления салонами оптик до лицензирования</li>
-								<li>За последний год помогла открыть и пролицензировать 26 клиник и приобрела новых друзей и коллег в медицинском бизнесе</li>
-								<li>Моя жизнь - это движение, семья, работа, здоровье и помощь детям</li>
-							</ul>
-						</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Тройной цикл предвакуума</li>
+						<li class="product__propsItem">5 программ стерилизации</li>
+						<li class="product__propsItem">Система вакуумной сушки</li>
+						<li class="product__propsItem">Тесты B&D и VACUUM-тест</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">107 000 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
 					</div>
 				</div>
-			</div>
-			<div class="slider__controls team__controls">
-				<button class="slider__button team__button team__button--prev">
-					<span class="vh">Назад</span>
-					<svg width="22" height="16" viewBox="0 0 22 16" fill="#848498" xmlns="http://www.w3.org/2000/svg">
-						<path d="M5.34005 1.08414C5.7078 0.719657 6.30138 0.722305 6.66586 1.09005C7.03034 1.4578 7.02769 2.05138 6.65995 2.41586L4.45624 4.6C3.56187 5.48642 2.94837 6.09647 2.53324 6.61338C2.39833 6.78137 2.29308 6.92925 2.21135 7.0625L21 7.0625C21.5178 7.0625 21.9375 7.48223 21.9375 8C21.9375 8.51777 21.5178 8.9375 21 8.9375L2.21135 8.9375C2.29307 9.07075 2.39833 9.21863 2.53324 9.38662C2.94837 9.90353 3.56187 10.5136 4.45624 11.4L6.65995 13.5841C7.02769 13.9486 7.03034 14.5422 6.66586 14.9099C6.30138 15.2777 5.7078 15.2803 5.34005 14.9159L3.09663 12.6924C2.25166 11.8549 1.56108 11.1705 1.07132 10.5607C0.562035 9.92652 0.193367 9.28284 0.0948868 8.5102C0.0732956 8.34081 0.0625 8.17041 0.0625 8C0.0625 7.82959 0.0732956 7.65919 0.0948868 7.4898C0.193367 6.71716 0.562035 6.07348 1.07132 5.43932C1.56108 4.82948 2.25167 4.14505 3.09665 3.30761L5.34005 1.08414Z"/>
-					</svg>
-				</button>
-				<button class="slider__button team__button team__button--next">
-					<span class="vh">Вперёд</span>
-					<svg width="22" height="16" viewBox="0 0 22 16" fill="#848498" xmlns="http://www.w3.org/2000/svg">
-						<path d="M16.6599 1.08414C16.2922 0.719657 15.6986 0.722305 15.3341 1.09005C14.9697 1.4578 14.9723 2.05138 15.3401 2.41586L17.5438 4.6C18.4381 5.48642 19.0516 6.09647 19.4668 6.61338C19.6017 6.78137 19.7069 6.92925 19.7887 7.0625L1 7.0625C0.482233 7.0625 0.0625 7.48223 0.0625 8C0.0625 8.51777 0.482233 8.9375 1 8.9375L19.7887 8.9375C19.7069 9.07075 19.6017 9.21863 19.4668 9.38662C19.0516 9.90353 18.4381 10.5136 17.5438 11.4L15.3401 13.5841C14.9723 13.9486 14.9697 14.5422 15.3341 14.9099C15.6986 15.2777 16.2922 15.2803 16.6599 14.9159L18.9034 12.6924C19.7483 11.8549 20.4389 11.1705 20.9287 10.5607C21.438 9.92652 21.8066 9.28284 21.9051 8.5102C21.9267 8.34081 21.9375 8.17041 21.9375 8C21.9375 7.82959 21.9267 7.65919 21.9051 7.4898C21.8066 6.71716 21.438 6.07348 20.9287 5.43932C20.4389 4.82948 19.7483 4.14505 18.9034 3.30761L16.6599 1.08414Z"/>
-					</svg>
-				</button>
-			</div>
-		</div>
-	</section>
-	<section class="formBlock formBlock--orange">
-		<div class="container">
-			<div class="formBlock__wrapper">
-				<div class="formBlock__body">
-					<h2 class="h2 formBlock__title">
-						Остались вопросы?
-					</h2>
-					<p class="formBlock__text">
-						Оставьте заявку, и мы проведём бесплатную консультацию по всем интересующим вас вопросам.
-					</p>
-					<form class="form form--white">
-						<div class="form__body">
-							<label class="form__label">
-								<input type="text" class="form__input" placeholder="Имя">
-							</label>
-							<label class="form__label">
-								<input type="email" class="form__input" placeholder="Почта">
-							</label>
-						</div>
-						<button type="button" class="button button--filled form__submit">Отправить</button>
-						<p class="form__caption">Нажимая на кнопку, вы соглашаетесь с «​политикой конфиденциальности»</p>
-					</form>
+				<div class="product product--discount catalog__item">
+					<div class="product__head">
+						<p class="product__caption">BES-15L-B-LED</p>
+						<h3 class="h3 product__title">Автоклав (стерилизатор паровой)</h3>
+					</div>
+					<div class="product__img">
+						<img src="img/catalog-2.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Тройной цикл предвакуума</li>
+						<li class="product__propsItem">5 программ стерилизации</li>
+						<li class="product__propsItem">Система вакуумной сушки</li>
+						<li class="product__propsItem">Тесты B&D и VACUUM-тест</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price"><span>200 000 ₽</span>120 694 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
 				</div>
-				<div class="formBlock__img">
-					<img src="img/formBlock-orange.svg" alt="">
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">"CATTANI" на 2 установки</p>
+						<h3 class="h3 product__title">Компрессор стоматологический безмасляный  (160 л/мин)</h3>
+					</div>
+					<div class="product__img">
+						<img src="img/catalog-3.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Объем ресивера 30 л</li>
+						<li class="product__propsItem">Производительность 160л/мин при 5 бар</li>
+						<li class="product__propsItem">Рабочий диапазон давления 5-8 бар.</li>
+						<li class="product__propsItem">Уровень шума 70 дБ.</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">141 980 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
+				</div>
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">Vatech EzSensor SOFT</p>
+						<h3 class="h3 product__title">Радиовизиограф</h3>
+					</div>	
+					<div class="product__img">
+						<img src="img/catalog-4.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Мягкий контур и легкое позиционирование</li>
+						<li class="product__propsItem">Самый маленький размер пикселя</li>
+						<li class="product__propsItem">Высокое разрешение и контрастный снимок</li>
+						<li class="product__propsItem">Прочные материалы</li>
+					</ul>
+					<div class="product__bottom">
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
+				</div>
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">BES-12L-B-LED</p>
+						<h3 class="h3 product__title">Автоклав (стерилизатор паровой)</h3>
+					</div>
+					<div class="product__img">
+						<img src="img/catalog-1.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Тройной цикл предвакуума</li>
+						<li class="product__propsItem">5 программ стерилизации</li>
+						<li class="product__propsItem">Система вакуумной сушки</li>
+						<li class="product__propsItem">Тесты B&D и VACUUM-тест</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price"> 107 000 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
+				</div>
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">BES-15L-B-LED</p>
+						<h3 class="h3 product__title">Автоклав (стерилизатор паровой)</h3>
+					</div>
+					<div class="product__img">
+						<img src="img/catalog-2.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Тройной цикл предвакуума</li>
+						<li class="product__propsItem">5 программ стерилизации</li>
+						<li class="product__propsItem">Система вакуумной сушки</li>
+						<li class="product__propsItem">Тесты B&D и VACUUM-тест</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">120 694 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
+				</div>
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">"CATTANI" на 2 установки</p>
+						<h3 class="h3 product__title">Компрессор стоматологический безмасляный  (160 л/мин)</h3>
+					</div>
+					<div class="product__img">
+						<img src="img/catalog-3.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Объем ресивера 30 л</li>
+						<li class="product__propsItem">Производительность 160л/мин при 5 бар</li>
+						<li class="product__propsItem">Рабочий диапазон давления 5-8 бар.</li>
+						<li class="product__propsItem">Уровень шума 70 дБ.</li>
+					</ul>
+					<div class="product__bottom">
+						<p class="product__price">141 980 ₽</p>
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
+				</div>
+				<div class="product catalog__item">
+					<div class="product__head">
+						<p class="product__caption">Vatech EzSensor SOFT</p>
+						<h3 class="h3 product__title">Радиовизиограф</h3>
+					</div>	
+					<div class="product__img">
+						<img src="img/catalog-4.png" alt="">
+					</div>
+					<ul class="product__props">
+						<li class="product__propsItem">Мягкий контур и легкое позиционирование</li>
+						<li class="product__propsItem">Самый маленький размер пикселя</li>
+						<li class="product__propsItem">Высокое разрешение и контрастный снимок</li>
+						<li class="product__propsItem">Прочные материалы</li>
+					</ul>
+					<div class="product__bottom">
+						<a href="#" class="button product__button">Подробнее</a>
+					</div>
 				</div>
 			</div>
 		</div>

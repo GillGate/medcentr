@@ -1,4 +1,12 @@
 .form {
+	max-width: 430px;
+
+	&--single {
+		.form__body {
+			flex-direction: column;
+		}
+	}
+
 	&__body {
 		display: flex;
 		margin-right: -10px;
@@ -32,6 +40,14 @@
 		&::placeholder {
 			color: #848498;
 		}
+	}
+
+	&__textarea {
+		min-height: 100px;
+		max-height: 200px;
+		padding: 15px 20px;
+		border-radius: 20px;
+		resize: vertical;
 	}
 
 	&__submit {

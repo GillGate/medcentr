@@ -1,6 +1,16 @@
 $(function(){
 	let clWidth = document.documentElement.clientWidth;
 
+	$('.navigateLink').on('click', function(e) {
+	    e.preventDefault();
+
+	    let target = $(this).attr('href');
+
+	    $('html, body').animate({
+	      scrollTop: $(target).offset().top
+	    }, 700);
+	});
+
 	$('.header__bar').on('click', function() {
 		$(this).toggleClass('header__bar--open');
 
