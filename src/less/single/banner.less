@@ -1,0 +1,75 @@
+.banner {
+	background-color: @grey-bg;
+	margin: 50px 40px 0;
+	border-radius: 20px;
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__info {
+		padding: 40px 0;
+		max-width: 470px;
+	}
+
+	&__caption {
+		color: @grey;
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	&__list {
+		margin-top: 40px;
+	}
+
+	&__person {
+		display: flex;
+		align-items: flex-end;
+		margin: 0 auto;
+
+		&Img {
+			margin-bottom: -4px;
+			position: relative;
+		}
+
+		&Message {
+			min-width: 330px;
+			min-height: 130px;
+			padding: 28px 65px 28px 20px;
+			box-sizing: border-box;
+			font-size: 16px;
+			line-height: 20px;
+			color: @dark-blue;
+			background: url(../img/banner-message.svg) no-repeat center / contain;
+			transform: translate(-100%, -45%);
+			position: absolute;
+			top: 50%;
+			left: 0;
+		}
+
+		&Info {
+			max-width: 210px;
+			padding-bottom: 28px;
+		}
+
+		&Title {
+			font-size: 15px;
+			font-family: @font-golos;
+			font-weight: 500;
+			color: @dark-blue;
+			margin-bottom: 10px;
+		}
+
+		&Text {
+			font-size: 14px;
+			line-height: 17px;
+			color: #686980;
+		}
+
+
+	}
+}
