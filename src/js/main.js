@@ -66,4 +66,30 @@ $(function(){
 			nextArrow: '.team__button--next'
 		});
 	}
+
+	$('.similar__list').slick({
+		slidesToShow: 4,
+		prevArrow: '.similar__button--prev',
+		nextArrow: '.similar__button--next',
+		responsive: [
+			{
+				breakpoint: 1240,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+		]
+	})
 });

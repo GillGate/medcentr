@@ -1,0 +1,327 @@
+.productItem {
+	padding-top: 40px;
+
+	.md-block({
+		padding-top: 0;
+	});	
+
+	&--discount {
+		.productItem__img {
+			&::after {
+				content: '';
+				width: 54px;
+				height: 60px;
+				background: url(../img/discount.svg) no-repeat center / contain;
+				position: absolute;
+				top: 30px;
+				right: 30px;
+
+				.sm-block({
+					width: 45px;
+					height: 50px;
+					top: 20px;
+					right: 20px;
+				});	
+			}
+		}
+	}
+
+	&__head {
+		.row-flex();
+
+		justify-content: space-between;
+
+		.lg-block({
+			align-items: flex-start;
+		});
+	}
+
+	&__img {
+		.col();
+		.size(5);
+		.size-lg(4);
+		.size-md(8);
+		.size-xs(12);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 64px 50px;
+		box-sizing: border-box;
+		background-color: @grey-bg;
+		border-radius: 10px;
+		position: relative;
+
+		.lg-block({
+			padding: 58px 50px;
+		});
+
+		.sm-block({
+			padding: 20px;
+		});
+
+		&--desktop {
+			.md-block({
+				display: none;
+			});
+		}
+
+		&--mobile {
+			display: none;
+
+			.md-block({
+				display: flex;
+				margin: 30px auto;
+			});
+		}
+	}
+
+	&__info {
+		.col();
+		.size(6);
+		.size-lg(7);
+		.size-md(10);
+		.size-sm(12);
+
+		display: flex;
+		flex-direction: column;
+
+		.md-block({
+			margin: 0 auto;
+		});
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 36px;
+
+		&--h3 {
+			font-size: 22px;
+			line-height: 26px;
+
+			.xs-block({
+				font-size: 16px;
+				line-height: 20px;
+			});
+		}
+
+		&--mobile {
+			display: none;
+
+			.md-block({
+				display: block;
+				margin-bottom: 40px;
+			});
+		}
+	}
+
+	&__description {
+		flex-grow: 1;
+
+		.md-block({
+			flex-grow: 0;
+		});
+	}
+
+	&__price {
+		line-height: 30px;
+	}
+
+	&__pay {
+		height: 30px;
+		margin-top: 30px;
+		margin-bottom: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.md-block({
+			order: 1;
+		});
+
+		.xs-block({
+			flex-direction: column;
+			align-items: flex-start;
+		});
+	}
+
+	&__payments {
+		display: flex;
+		align-items: center;
+
+		.xs-block({
+			margin-top: 10px;
+		});
+
+		&Item {
+			margin-left: 14px;
+			filter: grayscale(1) contrast(0.5);
+			cursor: pointer;
+			transition: filter .3s ease;
+
+			.xs-block({
+				margin-left: 0;
+				margin-right: 14px;
+			});
+
+			&:hover {
+				filter: none;
+			}
+		}
+	}
+
+	&__offer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 40px;
+		padding: 40px 0;
+		box-sizing: border-box;
+		border-top: 1px solid @grey-light;
+		border-bottom: 1px solid @grey-light;
+
+		.md-block({
+			order: 2;
+		});
+
+		.xs-block({
+			flex-direction: column;
+			padding: 20px 0;
+		});
+
+		&Info {
+			max-width: 320px;
+
+			.xs-block({
+				max-width: 90%;
+			});
+		}
+
+		&Text {
+			margin-top: 14px;
+		}
+
+		&Btn {
+			flex-shrink: 0;
+			margin-left: 10px;
+
+			.xs-block({
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+			});
+		}
+	}
+
+	&__section {
+		.row-flex();
+
+		justify-content: space-between;
+
+		&Title {
+			.xs-block({
+				font-size: 18px;
+				line-height: 21px;
+			});
+		}
+
+		&Info {
+			.col();
+			.size(8);
+			.size-sm(12);
+
+			.sm-block({
+				margin-top: 20px;
+			});
+		}
+
+		&Element {
+			padding: 20px 30px;
+			box-sizing: border-box;
+			background-color: @grey-bg;
+			border-radius: 10px;
+			margin-bottom: 10px;
+		}
+
+		&Content {
+			margin-top: 14px;
+			font-size: 16px;
+			line-height: 20px;
+
+			.xs-block({
+				font-size: 16px;
+				line-height: 20px;
+			});
+
+			ul {
+				padding-left: 20px;
+
+				li{
+					list-style: disc;
+				}
+			}
+		}
+
+		&Caption {
+			margin-top: 50px;
+			display: flex;
+			font-size: 22px;
+			line-height: 26px;
+			color: @orange;
+			font-weight: 500;
+
+			.sm-block({
+				margin-top: 30px;
+				font-size: 16px;
+				line-height: 20px;
+			});
+		}
+
+		&Icon {
+			flex-shrink: 0;
+			width: 46px;
+			height: 46px;
+			margin-right: 28px;
+			margin-top: 2px;
+
+			.sm-block({
+				width: 30px;
+				height: 30px;
+				margin-right: 12px;
+			});
+		}
+	}
+
+	&__props {
+		margin-top: 100px;
+
+		.sm-block({
+			margin-top: 40px;
+		});
+
+		.productItem__sectionInfo {
+			padding-bottom: 50px;
+			border-bottom: 1px solid @grey-light;
+
+			.sm-block({
+				padding-bottom: 40px;
+			});
+		}
+
+		.productItem__sectionCaption {
+			max-width: 500px;
+
+			.sm-block({
+				max-width: 360px;
+			});
+		}
+	}
+
+	&__advantages {
+		margin-top: 60px;
+
+		.sm-block({
+			margin-top: 40px;
+		});
+	}
+}
