@@ -1,0 +1,47 @@
+.promo {
+	&__wrapper {
+		.row-flex();
+
+		align-items: flex-start;
+	}
+
+	&__item {
+		.col();
+		.size(6);
+
+		padding: 30px 220px 40px 40px;
+		background: @grey-bg no-repeat right center / contain;
+		border-radius: 10px;
+
+		&--evaluation {
+			background-image: url(../img/promo-left-bg.png);
+		}
+
+		&--gift {
+			background-color: #333347;
+			background-image: url(../img/promo-right-bg.png);
+			color: @white;
+
+			.promo__button {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 36px;
+
+		span {
+			color: @orange;
+		}
+	}
+
+	&__text {
+		margin-top: 24px;
+	}
+
+	&__button {
+		margin-top: 40px;
+	}
+}

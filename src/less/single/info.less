@@ -1,0 +1,89 @@
+.info {
+	margin: 100px 40px;
+	padding-top: 60px;
+	background: linear-gradient(180deg, #E4E4E4 0%, rgba(228, 228, 228, 0) 100%);
+	border-radius: 20px;
+
+	&__head {
+		padding-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 88px;
+	}
+
+	&__mainTitle {
+		max-width: 570px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		font-size: 30px;
+		line-height: 36px;
+		padding-left: 110px;
+		padding-right: ;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 640px;
+		margin-left: 74px;
+		flex-shrink: 0;
+		font-size: 16px;
+		line-height: 20px;
+
+		ul {
+			padding-left: 20px;
+			margin-bottom: 14px;
+
+			li {
+				list-style: disc;
+				margin-bottom: 10px;
+			}
+		}
+
+		p {
+			margin-bottom: 14px;
+		}
+
+		span {
+			color: @orange;
+		}
+	}
+
+	&__cardList {
+		.row-flex();
+	}
+
+	&__card {
+		.col();
+		.size(4);
+
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		background-color: @grey-bg;
+		border: 1px solid @grey-border;
+
+		&Text {
+			margin-bottom: 30px;
+		}
+
+		&Title {
+			margin-top: auto;
+			font-size: 18px;
+			line-height: 21px;
+		}
+	}
+
+	&__caption {
+		padding-left: 110px;
+		margin-bottom: 24px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

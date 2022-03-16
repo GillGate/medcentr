@@ -91,5 +91,11 @@ $(function(){
 				}
 			},
 		]
+	});
+
+	$('.sliderTeam__list').slick({
+		slidesToShow: 4,
+		prevArrow: '.sliderTeam__button--prev',
+		nextArrow: '.sliderTeam__button--next',
 	})
 });

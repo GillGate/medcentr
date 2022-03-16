@@ -1,0 +1,52 @@
+.steps {
+	margin: 100px 0 90px;
+
+	&__mainTitle {
+		max-width: 480px;
+	}
+
+	&__list {
+		.row-flex();
+		.size(9);
+
+		margin-left: auto;
+		margin-top: 40px;
+		justify-content: flex-end;
+	}
+
+	&__item {
+		.col();
+		.size(4);
+
+		margin-bottom: 50px;
+	}
+
+	&__order {
+		width: 60px;
+		height: 60px;
+		font-size: 30px;
+		font-family: @font-golos;
+		line-height: 60px;
+		text-align: center;
+		color: @white;
+		background-color: @orange;
+		border-radius: 50%;
+	}
+
+	&__title {
+		margin-top: 30px;
+		margin-bottom: 14px;
+		font-family: 22px;
+		line-height: 26px;
+	}
+
+	&__text {
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__button {
+		margin-top: 24px;
+	}
+}
