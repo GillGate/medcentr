@@ -3,10 +3,23 @@
 		&Wrapper {
 			display: flex;
 			align-items: flex-end;
+
+			.md-block({
+				flex-direction: column;
+				align-items: center;
+			});
+
+			.sm-block({
+				align-items: flex-start;
+			});
 		}
 
 		&Info {
 			padding: 0 60px;
+
+			.md-block({
+				padding: 0;
+			});
 		}
 
 		&Text {
@@ -18,5 +31,10 @@
 		font-size: 60px;
 		line-height: 72px;
 		max-width: 680px;
+
+		.md-block({
+			max-width: 600px;
+			margin-bottom: 30px;
+		});
 	}
 }

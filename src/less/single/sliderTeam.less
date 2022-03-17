@@ -2,6 +2,15 @@
 	margin: 120px 0;
 	padding: 0 85px;
 
+	.md-block({
+		padding: 0 40px;
+	});
+
+	.sm-block({
+		margin: 60px 0;
+		padding: 0 16px;
+	});
+
 	&__head {
 		display: flex;
 		justify-content: space-between;
@@ -10,6 +19,10 @@
 
 	&__info {
 		max-width: 540px;
+
+		.sm-block({
+			max-width: 100%;
+		});
 	}
 
 	&__text {
@@ -20,12 +33,38 @@
 	&__list {
 		margin-top: 80px;
 
+		.sm-block({
+			margin-top: 40px;
+		});
+
 		.slick-list {
 			overflow: initial;
+
+			.sm-block({
+				overflow: hidden;
+			});
 		}
 	}
 
 	&__item {
 		padding: 0 5px;
+	}
+
+	&__controls {
+		&--desktop {
+			.sm-block({
+				display: none;
+			});
+		}
+
+		&--mobile {
+			display: none;
+
+			.sm-block({
+				display: flex;
+				justify-content: flex-end;
+				margin-top: 20px;
+			});
+		}
 	}
 }

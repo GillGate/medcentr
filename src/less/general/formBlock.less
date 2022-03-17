@@ -147,6 +147,22 @@
 		&--single {
 			background: @grey-bg url(../img/formBlock-single-bg.svg) no-repeat 450px top / 286px;
 			padding: 32px 110px 32px 70px;
+
+			.lg-block({
+				flex-direction: column;
+				text-align: center;
+				background-image: none;
+			});
+
+			.sm-block({
+				padding: 20px;
+			});
+
+			.formBlock__body {
+				.lg-block({
+					margin-top: 30px;
+				});
+			}
 		}
 	}
 

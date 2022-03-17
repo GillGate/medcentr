@@ -97,5 +97,29 @@ $(function(){
 		slidesToShow: 4,
 		prevArrow: '.sliderTeam__button--prev',
 		nextArrow: '.sliderTeam__button--next',
-	})
+		responsive: [
+			{
+				breakpoint: 1240,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 581,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+		]
+	});
+
+	$('.expand__button').on('click', function() {
+		$(this).closest('.expand').toggleClass('expand--open');
+	});
 });

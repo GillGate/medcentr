@@ -1,6 +1,10 @@
 .table {
 	text-align: center;
 
+	.sm-block({
+		min-width: 520px;
+	});
+
 	th {
 		text-align: center;
 		font-family: @font-golos;
@@ -10,6 +14,12 @@
 		padding: 18px 100px;
 		background-color: #DCDCDC;
 		position: relative;
+
+		.sm-block({
+			font-size: 16px;
+			line-height: 19px;
+			padding: 18px 40px;
+		});
 
 		&::after {
 			content: '';
