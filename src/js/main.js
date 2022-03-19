@@ -122,4 +122,30 @@ $(function(){
 	$('.expand__button').on('click', function() {
 		$(this).closest('.expand').toggleClass('expand--open');
 	});
+
+	$('.carousel__list').slick({
+		slidesToShow: 3,
+		prevArrow: '.carousel__button--prev',
+		nextArrow: '.carousel__button--next',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 581,
+				settings: {
+					slidesToShow: 1,
+					autoplay: true
+				}
+			},
+		]
+	});
+
+	$('.faq__title').on('click', function() {
+		$(this).closest('.faq__item').toggleClass('faq__item--opened');
+		$(this).next().slideToggle(500);
+	});
 });

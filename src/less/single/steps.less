@@ -5,8 +5,30 @@
 		margin: 80px 0 60px;
 	});
 
+	&--fw {
+		.steps__mainTitle {
+			max-width: 100%;
+		}
+
+		.steps__list {
+			max-width: 100%;
+			margin-top: 70px;
+
+			.sm-block({
+				margin-top: 30px;
+			});
+		}
+
+		.steps__item {
+			.size(3);
+			.size-llg(4);
+			.size-md(6);
+			.size-xs(12);
+		}
+	}
+
 	&__mainTitle {
-		max-width: 480px;
+		max-width: 540px;
 	}
 
 	&__list {
@@ -59,6 +81,7 @@
 		margin-bottom: 14px;
 		font-family: 22px;
 		line-height: 26px;
+		padding-right: 40px;
 
 		.sm-block({
 			margin-top: 20px;
@@ -67,6 +90,8 @@
 	}
 
 	&__text {
+		padding-right: 40px;
+
 		span {
 			font-weight: 500;
 		}

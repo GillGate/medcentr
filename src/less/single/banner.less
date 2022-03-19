@@ -20,6 +20,31 @@
 		margin: 40px 15px 0;
 	});
 
+	&--extended {
+		.banner__personMessage {
+			flex-direction: column;
+			align-items: flex-start;
+			background-image: url(../img/banner-message-extended.svg);
+			padding-top: 24px;
+			padding-left: 30px;
+			padding-right: 56px;
+
+			.md-block({
+				background-image: url(../img/banner-message-extended-mobile.svg);
+				padding-right: 30px;
+				padding-left: 20px;
+			});
+
+			span {
+				font-family: @font-golos;
+				font-size: 30px;
+				line-height: 36px;
+				color: @orange;
+				margin-bottom: 14px;
+			}
+		}
+	}
+
 	.container {
 		padding-right: 0;
 	}
