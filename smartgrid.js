@@ -22,6 +22,9 @@ const settings = {
         },
         xs: {
             width: "580px",
+        },
+        xxs: {
+            width: "460px",
         }
     },
     oldSizeStyle: false,

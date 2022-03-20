@@ -99,19 +99,19 @@ $(function(){
 		nextArrow: '.sliderTeam__button--next',
 		responsive: [
 			{
-				breakpoint: 1240,
+				breakpoint: 1550,
 				settings: {
 					slidesToShow: 3
 				}
 			},
 			{
-				breakpoint: 1024,
+				breakpoint: 1240,
 				settings: {
 					slidesToShow: 2
 				}
 			},
 			{
-				breakpoint: 581,
+				breakpoint: 600,
 				settings: {
 					slidesToShow: 1
 				}
@@ -148,4 +148,15 @@ $(function(){
 		$(this).closest('.faq__item').toggleClass('faq__item--opened');
 		$(this).next().slideToggle(500);
 	});
+
+	$('.reasons__item').hover(
+		function() {
+			$(this).addClass('reasons__item--hover');
+			$(this).find('.reasons__text').slideDown(500);
+		},
+		function() {
+			$(this).removeClass('reasons__item--hover');
+			$(this).find('.reasons__text').slideUp(500);
+		}
+	)
 });

@@ -27,8 +27,29 @@
 		}
 	}
 
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+
+		.lg-block({
+			flex-direction: column;
+			align-items: flex-start;
+		});
+
+		.steps__mainTitle {
+			max-width: 540px;
+		}
+	}
+
 	&__mainTitle {
 		max-width: 540px;
+		margin-bottom: 30px;
+	}
+
+	&__mainText {
+		max-width: 490px;
 	}
 
 	&__list {

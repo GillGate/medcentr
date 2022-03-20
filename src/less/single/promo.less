@@ -76,6 +76,10 @@
 				});
 			}
 
+			.promo__text {
+				max-width: 320px;
+			}
+
 			.promo__button {
 				margin-top: 60px;
 
@@ -92,6 +96,43 @@
 			.md-block({
 				background-image: none;
 			})
+		}
+
+		&--cleaning {
+			background-image: url(../img/promo-cleaning-bg.png);
+
+			.md-block({
+				background-image: none;
+			});
+
+			.promo__text {
+				max-width: 330px;
+
+				.md-block({
+					margin: 30px auto 0;
+				});
+			}
+
+			.promo__img {
+				.sm-block({
+					text-align: right;
+					margin-right: -20px;
+				});
+			}
+		}
+
+		&--advice {
+			width: 100% !important;
+			max-width: 1090px !important;
+			padding-right: 490px;
+			margin: 0 auto;
+
+			background-image: url(../img/promo-left-bg.png);
+			background-position-x: 90%;
+
+			.md-block({
+				background-image: none;
+			});
 		}
 	}
 

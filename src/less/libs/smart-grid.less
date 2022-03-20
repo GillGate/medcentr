@@ -6,6 +6,7 @@
 @break_md: 1024px;
 @break_sm: 768px;
 @break_xs: 580px;
+@break_xxs: 460px;
 
 @offset: 10px;
 @offset_llg: @offset;
@@ -13,6 +14,7 @@
 @offset_md: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
+@offset_xxs: @offset;
 
 @offset_one_side: (@offset / 2);
 @offset_llg_one_side: (@offset_llg / 2);
@@ -20,6 +22,7 @@
 @offset_md_one_side: (@offset_md / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
+@offset_xxs_one_side: (@offset_xxs / 2);
 
 @fields: 65px;
 
@@ -107,6 +110,11 @@
 .size-xs(@n){
     @val: 100% / @columns * @n;
     .xs(width, ~"calc(@{val} - @{offset_xs})");
+}
+
+.size-xxs(@n){
+    @val: 100% / @columns * @n;
+    .xxs(width, ~"calc(@{val} - @{offset_xxs})");
 }
 
 .shift(@n){
@@ -301,6 +309,38 @@
     .xs(padding-right, ~"calc(@{val} + @{offset_xs_one_side})");
 }
 
+.shift-xxs(@n){
+    @val: 100% / @columns * @n;
+    .xxs(margin-left, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(margin-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
+.shift-xxs-left(@n){
+    @val: 100% / @columns * @n;
+    .xxs(margin-left, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
+.shift-xxs-right(@n){
+    @val: 100% / @columns * @n;
+    .xxs(margin-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
+.shift-xxs-padding(@n){
+    @val: 100% / @columns * @n;
+    .xxs(padding-left, ~"calc(@{val} + @{offset_xxs_one_side})");
+    .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
+.shift-xxs-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .xxs(padding-left, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
+.shift-xxs-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
 .llg(@name, @value){
     @media screen and (max-width: @break_llg){
         @{name}: @value;
@@ -357,6 +397,18 @@
 
 .xs-block(@content){
     @media screen and (max-width: @break_xs){
+        @content();
+    }
+}
+
+.xxs(@name, @value){
+    @media screen and (max-width: @break_xxs){
+        @{name}: @value;
+    }
+}
+
+.xxs-block(@content){
+    @media screen and (max-width: @break_xxs){
         @content();
     }
 }

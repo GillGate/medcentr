@@ -179,6 +179,50 @@
 				});
 			}
 		}
+
+		&--cleaning {
+			background: @grey-bg url(../img/formBlock-cleaning.svg) no-repeat 55% top / 320px;
+
+			.lg-block({
+				background-position-y: 40%;
+			});
+
+			.sm-block({
+				background-position-y: 20%;
+			});
+
+			.formBlock__info {
+				max-width: 610px;
+				margin-right: 30px;
+			}
+
+			.formBlock__text {
+				background-color: @grey-bg;
+
+				.lg-block({
+					margin-top: 0;
+					text-align: center;
+				});
+			}
+
+			.form {
+				background-color: @grey-bg;
+			}
+		}
+
+		&--violation {
+			background-image: url(../img/formBlock-violation-bg.svg);
+			background-position-x: 46%;
+
+			.formBlock__title {
+				max-width: 450px;
+			}
+
+			.formBlock__caption {
+				margin-top: 24px;
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__info {
@@ -217,5 +261,57 @@
 			margin-top: 30px;
 			min-width: auto;
 		});
+	}
+
+	&__notion {
+		margin-top: 30px;
+		padding: 20px;
+		background-color: #EBEBEB;
+		border: 1px solid @grey-border;
+		border-radius: 10px;
+
+		.sm-block({
+			background-color: inherit;
+			border-color: transparent;
+			padding: 0;
+		});
+
+		&--desktop {
+			.lg-block({
+				display: none;
+			});
+		}
+
+		&--mobile {
+			display: none;
+
+			.lg-block({
+				display: block;
+				margin: 30px auto 0;
+				max-width: 350px;
+			});
+		}
+
+		&Title {
+			margin-bottom: 20px;
+			font-size: 16px !important;
+			line-height: 20px !important;
+			display: flex;
+			align-items: center;
+
+			.sm-block({
+				align-items: flex-start;
+			});
+
+			&::before {
+				content: '';
+				display: inline-flex;
+				width: 26px;
+				height: 26px;
+				flex-shrink: 0;
+				margin-right: 12px;
+				background: url(../img/icon-notion.svg) no-repeat center / contain;
+			}
+		}
 	}
 }

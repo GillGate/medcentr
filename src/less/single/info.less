@@ -21,6 +21,10 @@
 			margin-bottom: 60px;
 			padding-top: 0px;
 		});
+
+		.sm-block({
+			margin-bottom: 40px;
+		});
 	}
 
 	&__mainTitle {
@@ -29,6 +33,10 @@
 		.lg-block({
 			margin-bottom: 30px;
 		});
+
+		span {
+			color: @orange;
+		}
 	}
 
 	&__item {
@@ -138,5 +146,30 @@
 			padding-left: 0px;
 			margin-bottom: 14px;
 		});
+	}
+
+	&__quiz {
+		height: 600px;
+		background-color: @grey-bg;
+		border: 1px solid @grey-border;
+		border-radius: 10px;
+
+		.sm-block({
+			height: 400px;
+		});
+	}
+
+	&--cleaning {
+		.info__head {
+			align-items: flex-end;
+		}
+
+		.info__content {
+			max-width: 500px;
+
+			span {
+				color: inherit;
+			}
+		}
 	}
 }
