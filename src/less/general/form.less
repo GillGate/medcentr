@@ -7,6 +7,12 @@
 		}
 	}
 
+	&--popup {
+		.form__input {
+			background-color: @grey-bg;
+		}
+	}
+
 	&__body {
 		display: flex;
 		margin-right: -10px;
@@ -20,6 +26,37 @@
 		display: inline-block;
 		margin-right: 10px;
 		margin-bottom: 10px;
+		line-height: 22px;
+
+		&--file {
+			margin: 26px 10px 30px;
+
+			.sm-block({
+				margin: 16px 10px 20px;
+			});
+
+			.xs-block({
+				font-size: 12px;
+			});
+
+			p:first-child {
+				&::before {
+					content: '';
+					display: inline-block;
+					vertical-align: middle;
+					width: 22px;
+					height: 22px;
+					margin-right: 12px;
+					margin-bottom: 2px;
+					background: url(../img/icon-upload.svg) no-repeat center / contain;
+				}
+			}
+
+			span {
+				color: @orange;
+				text-decoration: underline;
+			}
+		}
 	}
 
 	&__input {

@@ -159,4 +159,18 @@ $(function(){
 			$(this).find('.reasons__text').slideUp(500);
 		}
 	)
+
+	$('.closePopup').on('click', closePopup);
+
+	$('.popup').on('click', function(e) {
+		let $wrapper = $(this);
+
+		if ($wrapper.has(e.target).length === 0 ) {
+			closePopup(e);
+		}
+	});
+
+	function closePopup(e) {
+		$(e.target).closest('.popup').removeClass('popup--open');
+	}
 });
