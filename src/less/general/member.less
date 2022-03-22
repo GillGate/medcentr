@@ -2,6 +2,7 @@
 	width: 100%;
 	max-width: 540px;
 	border-radius: 10px;
+	background-color: @grey-bg;
 	position: relative;
 	z-index: 2;
 	transition: color .5s ease, background .5s ease;
@@ -32,6 +33,11 @@
 	}
 
 	&__img {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		height: 100%;
+
 		img {
 			border-radius: 10px;
 		}
