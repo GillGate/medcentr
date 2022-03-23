@@ -28,6 +28,22 @@
 		margin-bottom: 10px;
 		line-height: 22px;
 
+		&--wrong {
+			input {
+				border: 1px solid red;
+			}
+
+			&::after {
+			    content: attr(data-error);
+			    display: block;
+			    text-align: left;
+			    color: red;
+			    padding: 0 10px;
+			    font-size: 12px;
+			    line-height: 18px;
+			}
+		}
+
 		&--file {
 			margin: 26px 10px 30px;
 
@@ -108,6 +124,16 @@
 	}
 
 	&--white {
+		.form__label--wrong {
+			input {
+				border: 1px solid @white;
+			}
+
+			&::after {
+			    color: @white;
+			}
+		}
+
 		.form__input {
 			background-color:  #FF9568;
 			color: @white;

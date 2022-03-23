@@ -17,6 +17,20 @@ body {
 	line-height: 20px;
 	position: relative;
 
+	&::-webkit-scrollbar {
+	    width: 10px;
+	}
+
+	&::-webkit-scrollbar-track {
+	    background-color: #CDCACA;;
+	    border-radius: 100px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+	    background-color: #F5F5F5;
+	    border-radius: 100px;
+	}
+
 	.sm-block({
 		font-size: 14px;
 		line-height: 18px;
@@ -143,6 +157,10 @@ button {
 			margin-bottom: 8px;
 		}
 	}
+
+	ol {
+		padding-left: 20px;
+	}
 }
 
 .caption {
@@ -161,7 +179,7 @@ button {
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 500;
-	transition: background .5s ease;
+	transition: background .5s ease, color .5s ease, border .5s ease;
 
 	.sm-block({
 		font-size: 16px;
@@ -181,6 +199,13 @@ button {
 	&--filled {
 		background-color: @orange;
 		color: @white;
+
+		&[disabled] {
+			border-color: transparent;
+			background-color: @grey-light !important;
+			color: @grey-bg !important;
+			cursor: not-allowed;
+		}
 
 		&:hover {
 			background-color: @orange-lighten;

@@ -93,6 +93,10 @@
 			max-width: 65px;
 			margin-right: 10px;
 		});
+
+		img {
+			border-radius: 50%;
+		}
 	}
 
 	&__name {
@@ -135,6 +139,23 @@
 
 	&__text {
 		margin-top: 30px;
+		max-height: 156px;
+    	overflow-y: auto;
+    	padding-right: 10px;
+
+    	&::-webkit-scrollbar {
+		    width: 2px;
+		}
+
+    	&::-webkit-scrollbar-track {
+		    background-color: #CDCACA;;
+		    border-radius: 100px;
+		}
+
+    	&::-webkit-scrollbar-thumb {
+		    background-color: #F5F5F5;
+		    border-radius: 100px;
+		}
 	}
 
 	&__bottom {
