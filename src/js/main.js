@@ -171,6 +171,13 @@ $(function(){
 	});
 
 	function closePopup(e) {
-		$(e.target).closest('.popup').removeClass('popup--open');
+		// $((e.target).closest('.popup')).removeClass('popup--open');
+		$('.popup').removeClass('popup--open');
+
+		setTimeout(() => {
+	    	$('.popup').hide();
+	    }, 500);
+
+		$('html').removeClass('openMenu');
 	}
 });

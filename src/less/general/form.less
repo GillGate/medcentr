@@ -29,7 +29,7 @@
 		line-height: 22px;
 
 		&--wrong {
-			input {
+			input, textarea {
 				border: 1px solid red;
 			}
 
@@ -84,11 +84,15 @@
 		color: @black;
 		box-sizing: border-box;
 		background-color: #D8D8D8;
-		border-color: transparent;
+		border: 1px solid transparent;
 
 		.sm-block({
 			height: 40px;
 		});
+
+		&:focus {
+			outline: 1px solid @white;
+		}
 
 		&::placeholder {
 			color: #848498;
@@ -101,6 +105,21 @@
 		padding: 15px 20px;
 		border-radius: 20px;
 		resize: vertical;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+		    width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+		    background-color: #CDCACA;;
+		    border-radius: 100px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+		    background-color: #F5F5F5;
+		    border-radius: 100px;
+		}
 	}
 
 	&__submit {
