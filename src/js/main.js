@@ -166,13 +166,163 @@ $(function(){
 		let $wrapper = $(this);
 
 		if ($wrapper.has(e.target).length === 0 ) {
+			if($('.popup').hasClass('popup--video')) {
+				$('.case__video').empty();
+			}
+
 			closePopup(e);
 		}
 	});
 
+	$('.openPopup--common').on('click', function() {
+	    openPopup('.popup--common');
+	});
+
+	$('.openPopup--service').on('click', function() {
+	    openPopup('.popup--service');
+
+	    let service = $(this).closest('.service__item').find('.service__title').text();
+
+	    $('.popup--service .popup__title span').text(service.toLowerCase());
+	    $('.popup--service input[name=popup-service-name]').val(service);
+	});
+
+	$('.openPopup--kp').on('click', function() {
+	    openPopup('.popup--kp');
+	});
+
+	$('.openPopup--analysis').on('click', function() {
+	    openPopup('.popup--analysis');
+	});
+
+	$('.openPopup--task').on('click', function() {
+	    openPopup('.popup--task');
+	});
+
+	$('.openPopup--task-common').on('click', function() {
+	    openPopup('.popup--task-common');
+	});
+
+	$('.openPopup--audit-prepare').on('click', function() {
+	    openPopup('.popup--audit-prepare');
+	});
+
+	$('.openPopup--audit-buy').on('click', function() {
+	    openPopup('.popup--audit-buy');
+	});
+
+	$('.openPopup--audit-violation').on('click', function() {
+	    openPopup('.popup--audit-violation');
+	});
+
+	$('.openPopup--problem').on('click', function() {
+	    openPopup('.popup--problem');
+	});
+
+	$('.case__play').on('click', function() {
+		openPopup('.popup--video');
+		$('.popup--video').addClass('popup--video-open');
+
+		let videoLink = $(this).data('video').split('/');
+		let title = $(this).data('caption');
+
+		let videoId = videoLink[videoLink.length - 1];
+
+		$('.case__video').html(`<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1" title="${title}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>`);
+	});
+
+	$('.closePopup--video').on('click', function(e) {
+		closePopup(e);
+
+		$('.case__video').empty();
+	});
+
+	$('.form__submit--advice').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/advice.php`, $(this));
+	});
+
+	$('.form__submit--advice-home').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/advice-home.php`, $(this));
+	});
+
+	$('.form__submit--advice-bottom').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/advice-bottom.php`, $(this));
+	});
+
+	$('.form__submit--contacts').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/contacts.php`, $(this));
+	});
+
+	$('.form__submit--popup-common').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/popup-common.php`, $(this));
+	});
+
+	$('.form__submit--popup-extended').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/popup-extended.php`, $(this));
+	});
+
+	$('.form__submit--popup-service').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/popup-service.php`, $(this));
+	});
+
+	function ajaxHandler(event, src, submit) {
+	    let $submit = submit;
+	    let $form = $submit.closest('.form');
+	    let $inputWrap = $form.find('.form__label');
+
+	    event.preventDefault();
+	    $submit.attr('disabled', true);
+	    
+	    $.ajax({
+	        url: src,
+	        method: 'POST',
+	        data: $form.serialize(),
+	        dataType: 'json',
+	        timeout: 10000,
+	        success: function(data) {
+	            onSucess(data, $form, $inputWrap);
+	        },
+	        complete: function() {
+	            $submit.attr('disabled', false);
+	        },
+	    });
+	}
+
+	function onSucess(data, $form, $label) {
+		if(data.res) {
+	    	$label.removeClass('form__label--wrong');
+	    	$form.trigger('reset');
+
+	    	openPopup('.popup--done');
+	    } else {
+	       $label.attr('data-error', '').removeClass('form__label--wrong');
+
+	        for( let name in data.errors) {
+	            let target = $(`[name=${name}]`);
+	            
+	            if(target.length > 0){
+	                target.closest($label).addClass('form__label--wrong').attr('data-error', data.errors[name]);
+	            }
+	        }
+	    }
+	}
+
+	function openPopup(selector) {
+	    $(selector).show();
+
+	    setTimeout(() => {
+	        $(selector).addClass('popup--open');
+	    });
+
+	    $('html').addClass('openMenu');
+	}
+
 	function closePopup(e) {
-		// $((e.target).closest('.popup')).removeClass('popup--open');
 		$('.popup').removeClass('popup--open');
+
+		if($('.popup').hasClass('popup--video')) {
+			$('.popup').removeClass('popup--video-open');
+		}
 
 		setTimeout(() => {
 	    	$('.popup').hide();

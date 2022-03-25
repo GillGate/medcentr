@@ -167,7 +167,6 @@
 	}
 
 	&--open {
-		// display: block;
 		opacity: 1;
 
 		.popup__wrapper {
@@ -224,9 +223,32 @@
 		}
 	}
 
-	&--product {
-		.popup__content {
-			max-width: 436px;
+	&--video {
+		background: rgba(149,149,160,.95);
+
+		&-open {
+			display: flex !important;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.popup__close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+
+		.popup__wrapper {
+			display: block;
+			width: 100%;
+			max-width: 1080px;
+			min-height: auto;
+			padding: 0;
+			height: auto;
+			margin: 0 30px;
+			background: inherit;
+			transform: none;
+			position: relative;
 		}
 	}
 }
