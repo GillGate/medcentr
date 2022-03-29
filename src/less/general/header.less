@@ -67,6 +67,7 @@
 		line-height: 25px;
 		font-weight: 500;
 		color: @dark-blue;
+		transition: color .5s ease;
 
 		.md-block({
 			font-size: 16px;
@@ -75,6 +76,10 @@
 
 		&:last-child {
 			margin-left: 40px;
+		}
+
+		&:hover {
+			color: @orange;
 		}
 	}
 

@@ -19,8 +19,23 @@ $(function(){
 	});
 
 	$('.nav__link--services').on('click', function() {
-		$(this).toggleClass('nav__link--nestedOpen');
-		$('.nav__nested').slideToggle(300);
+		if($(this).hasClass('nav__link--nestedOpen')) {
+			$('.nav__nested').removeClass('nav__nested--open');
+			$(this).removeClass('nav__link--nestedOpen');
+
+			setTimeout(() => {
+				$('.nav__nested').hide();
+			}, 500);
+			
+		}
+		else {
+			$('.nav__nested').show();
+			$(this).addClass('nav__link--nestedOpen');
+
+			setTimeout(() => {
+				$('.nav__nested').addClass('nav__nested--open');
+			});
+		}
 	});
 
 	$('.reviews__slider').slick({
@@ -219,6 +234,10 @@ $(function(){
 	    openPopup('.popup--problem');
 	});
 
+	$('.openPopup--product').on('click', function() {
+	    openPopup('.popup--product');
+	});
+
 	$('.case__play').on('click', function() {
 		openPopup('.popup--video');
 		$('.popup--video').addClass('popup--video-open');
@@ -263,6 +282,19 @@ $(function(){
 
 	$('.form__submit--popup-service').on('click', function(event) {
 	    ajaxHandler(event, `${themeRoot}/php/popup-service.php`, $(this));
+	});
+
+	$('.form__submit--popup-kp').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/popup-kp.php`, $(this));
+	});
+
+	$('.form__submit--popup-product').on('click', function(event) {
+	    ajaxHandler(event, `${themeRoot}/php/popup-product.php`, $(this));
+	});
+
+	$('#popup-kp-file').on('change', function() {
+		let file = $(this)[0].files[0];
+		$('.form__label--file p').text(file.name);
 	});
 
 	function ajaxHandler(event, src, submit) {
