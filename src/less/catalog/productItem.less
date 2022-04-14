@@ -100,8 +100,8 @@
 			line-height: 26px;
 
 			.xs-block({
-				font-size: 16px;
-				line-height: 20px;
+				font-size: 17px;
+				line-height: 22px;
 			});
 		}
 
@@ -220,7 +220,7 @@
 
 		&Title {
 			.xs-block({
-				font-size: 18px;
+				font-size: 19px;
 				line-height: 21px;
 			});
 		}
@@ -247,17 +247,69 @@
 			margin-top: 14px;
 			font-size: 16px;
 			line-height: 20px;
+			color: @dark-blue;
 
 			.xs-block({
 				font-size: 16px;
 				line-height: 20px;
 			});
 
+			p {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
 			ul {
 				padding-left: 20px;
 
 				li{
 					list-style: disc;
+				}
+			}
+
+			h3, h4 {
+				margin-top: 18px;
+				margin-bottom: 14px;
+				font-size: 18px;
+    			font-weight: 700;
+
+    			strong {
+    				font-weight: inherit;
+    			}
+
+    			.xs-block({
+    				font-size: 17px;
+    			});
+			}
+
+			h5 {
+				margin-top: 10px;
+				margin-bottom: 6px;
+				font-size: 16px;
+				font-weight: 500;
+
+				strong {
+    				font-weight: inherit;
+    			}
+
+				.xs-block({
+    				font-size: 16px;
+    			});
+			}
+
+			table {
+				margin-top: 16px;
+
+				.xs-block({
+					font-size: 13px;
+				});
+
+				tr {
+
+				}
+				td {
+					border: 1px solid @grey-light;
+					padding: 6px;
 				}
 			}
 		}

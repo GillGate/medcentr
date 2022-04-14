@@ -175,6 +175,10 @@ $(function(){
 		}
 	)
 
+	$('.catalog__select').on('change', function(e) {
+	    $('.catalog__filter').submit();
+	});
+
 	$('.closePopup').on('click', closePopup);
 
 	$('.popup').on('click', function(e) {
