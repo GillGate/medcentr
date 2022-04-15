@@ -138,6 +138,11 @@ $(function(){
 		$(this).closest('.expand').toggleClass('expand--open');
 	});
 
+	$('.promo__button--gift').on('click', function() {
+		$('.lp9-widget-on').addClass('lp9-widget-a');
+		$('.lp9-widget-bg-on').addClass('lp9-widget-bg-a');
+	});
+
 	$('.carousel__list').slick({
 		slidesToShow: 3,
 		prevArrow: '.carousel__button--prev',
