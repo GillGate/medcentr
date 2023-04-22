@@ -1,0 +1,44 @@
+.nav-links {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.page-numbers {
+	font-size: 14px;
+	line-height: 30px;
+	padding: 6px 12px;
+	height: 30px;
+	color: #848498;
+}
+
+.page-numbers.current {
+	background: #E4E4E4;
+	border-radius: 50%;
+}
+
+.page-numbers.prev, .page-numbers.next {
+	font-size: 13px;
+}
+
+.page-numbers.prev::before {
+	content: '';
+	display: inline-block;
+	width: 7px;
+	height: 8px;
+	background: url(../img/pagination-arrow.svg) no-repeat center / contain;
+	margin-right: 8px;
+}
+
+.page-numbers.next::after {
+	content: '';
+	display: inline-block;
+	width: 7px;
+	height: 8px;
+	background: url(../img/pagination-arrow.svg) no-repeat center / contain;
+	transform: rotate(180deg);
+	margin-left: 8px;
+}
+
+.blog__link::before {
+	display: none;
+}

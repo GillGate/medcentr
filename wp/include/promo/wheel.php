@@ -1,0 +1,1 @@
+<script>(function(d, w){ w.lp9 = 'xutapo73'; var s = d.createElement('script'); s.async = true; s.src = 'https://lp9.ru/widget/'+w.lp9+'.js?'+Date.now(); s.charset = 'UTF-8'; if (d.head) d.head.appendChild(s); })(document, window);</script>
